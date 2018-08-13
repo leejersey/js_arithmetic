@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>去掉一组整型数组重复的值</title>
+	<script type="text/javascript">
+	var arr = [1,13,24,11,11,14,1,2];
+	// 方法一：
+	function unique (arr){
+		var hashTable = {};
+		var data = [];
+		for ( var i=0;i<arr.length;i++ ){
+			if(!hashTable[arr[i]]){
+				hashTable[arr[i]] = true;
+     			data.push(arr[i]);
+			}
+		}
+		console.log(hashTable);
+		console.log(data);
+		return data;
+	}
+	unique(arr);
+	// 方法二：
+	function unique2 (arr){
+		var result = [];
+		for ( var i=0;i<arr.length;i++ ){
+			//如果在结果数组result中没有找到arr[i],则把arr[i]压入结果数组result中
+			if(result.indexOf(arr[i]) == -1){
+				result.push(arr[i]);
+			}
+		}
+		console.log(result);
+		return result;
+	}
+	unique2(arr);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
