@@ -4,9 +4,19 @@
 	<meta charset="UTF-8">
 	<title>排序算法-冒泡排序</title>
 	<script type="text/javascript">
-	var arr = [9,6,2,11,7,3,2,8,3,4];
+	var arr = [9,6,2,11,7,3,8,3,4];
 	function bubbleSort(arr){
-		for(var i=0;)
+		for(var i=0;i<arr.length-1;i++){
+			for(var j=i+1;j<arr.length;j++){
+				if(arr[i]>arr[j]){
+					var temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+			}
+		}
+		console.log(arr);
+		return arr;
 	}
 
 	bubbleSort(arr)

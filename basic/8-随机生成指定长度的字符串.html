@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>随机生成指定长度的字符串</title>
+	<script type="text/javascript">
+		function randomString(n){
+			var str = 'abcdefghijklmnopqrstuvwxyz9876543210';
+
+			var tmp = '', i=0, l=str.length;
+
+			for(var i=0;i<n;i++){
+				tmp += str.charAt(Math.floor(Math.random()*1));
+			}
+			return tmp;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
