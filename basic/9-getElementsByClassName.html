@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getElementsByClassName</title>
+	<script type="text/javascript">
+		function queryClassName(node, name){
+			var starts ='(^|[ \n\r\t\f])',
+				ends ='([ \n\r\t\f]|$)';
+			var arr = [],
+				regex = new RegExp(starts + name + ends),
+		        elements = node.getElementsByTagName("*"),
+		        length = elements.length,
+		        i = 0,
+		        element;
+
+		    while(i<length){
+		    	element = elements[i];
+		    	if(regex.test(element.className)){
+		    		arr.push(element);
+		    	}
+
+		    	i++;
+		    }
+
+		    return arr;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
